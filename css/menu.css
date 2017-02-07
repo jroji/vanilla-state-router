@@ -1,0 +1,21 @@
+
+
+.menu__list {
+    background: #2d2d2d;
+    color: white;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__item {
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.menu__item:focus, .menu__item:hover {
+    color: #f1de74;
+    outline: 0;
+}
