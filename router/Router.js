@@ -2,9 +2,10 @@ class Router {
 
   constructor(properties = {}) {
 
-      this._statesList = [];
+    this._statesList = [];
     this._states = [];
     this._currentState;
+
     /**
      * TODO: Ñapa
      */
@@ -16,10 +17,9 @@ class Router {
        document.addEventListener('click', (ev) => {
          let tempLink = ev.srcElement.attributes['state-link'];
          if( tempLink ) {
-           this.goTo(event.srcElement.attributes['state-link'].value);
+           this.goTo(tempLink.value);
          }
-        })
-
+        });
     }, 100);
 
     /**
@@ -63,7 +63,7 @@ class Router {
   _createHashObserver() {
     window.onhashchange = () => {
      this._setCurrentState();
-    }
+    };
   }
 
   /**
